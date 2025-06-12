@@ -89,7 +89,7 @@ Laravel ヘッドレス CMS
 - DB: MySQL 8.0
 - API設計: RESTful API
 
-## 8. ディレクトリ構造（Project Structure）
+## 5. ディレクトリ構造（Project Structure）
 
 ```
 laravel_headless_cms/
@@ -105,7 +105,7 @@ laravel_headless_cms/
 └── ...
 ```
 
-## 13. 使用について
+## 6. 使用について
 
 このプロジェクトはポートフォリオ作品として公開しているものであり、実運用や商用利用を目的としたものではありません。
 無断での使用・転載・再配布は禁止しております。
