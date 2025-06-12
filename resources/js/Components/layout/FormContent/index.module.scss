@@ -1,0 +1,40 @@
+@use '@/styles/global' as *;
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: pxrem(80);
+    }
+}
+
+.contentHeader {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: pxrem(20);
+    gap: pxrem(10);
+}
+
+.contentBody {
+    display: flex;
+    flex-direction: column;
+    gap: pxrem(20);
+}
+
+.contentFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: pxrem(20);
+    gap: pxrem(20);
+
+    &[data-modifier='right'] {
+        justify-content: flex-end;
+    }
+}

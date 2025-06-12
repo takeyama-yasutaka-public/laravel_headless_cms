@@ -1,0 +1,20 @@
+@use '@/styles/global' as *;
+
+.formTextarea {
+  width: 100%;
+  padding: pxrem(5) pxrem(10);
+  background-color: $p-color_white;
+  border: 1px solid $s-color_border_field;
+  border-radius: 4px;
+  resize: vertical;
+
+  &::placeholder {
+    color: $s-color_text_place-holder;
+  }
+
+  &:focus {
+    padding: pxrem(4) pxrem(9);
+    border: 2px solid $s-color_border_focused;
+    outline: none;
+  }
+}

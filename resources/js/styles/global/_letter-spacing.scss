@@ -1,0 +1,10 @@
+@use 'variables' as *;
+
+/*********************************
+    letter-spacingを自動追加
+*********************************/
+
+@mixin font($font-size, $letter-spacing: $letter-spacing_m) {
+  font-size: $font-size;
+  letter-spacing: $letter-spacing;
+}

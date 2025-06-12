@@ -1,0 +1,30 @@
+@use '@/styles/global' as *;
+
+.contentHeader {
+  display: flex;
+  flex-direction: column;
+  gap: pxrem(20);
+}
+
+.contentHeaderBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  time {
+    @include font($font-size_s);
+    line-height: $line-height_s;
+    white-space: nowrap;
+  }
+}
+
+.contentBody {
+  display: flex;
+  flex-direction: column;
+  gap: pxrem(20);
+}
+
+.contentFooter {
+  display: flex;
+  justify-content: center;
+}

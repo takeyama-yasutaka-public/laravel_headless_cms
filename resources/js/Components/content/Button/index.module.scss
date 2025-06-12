@@ -1,0 +1,116 @@
+@use '@/styles/global' as *;
+
+.button {
+  display: inline-block;
+  width: fit-content;
+  min-width: pxrem(150);
+  max-width: 100%;
+  padding: pxrem(5) pxrem(15);
+  background-color: $s-color_button_normal;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: $s-color_text_on-fill;
+  @include text-style(button_m);
+  text-decoration: none;
+  text-align: center;
+  transition: $transition_high;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $s-color_button_hover;
+    }
+  }
+
+  @media (hover: none) {
+    -webkit-tap-highlight-color: transparent;
+
+    &:active {
+      background-color: $s-color_button_hover;
+    }
+  }
+
+  &[data-modifierColor='secondary'] {
+    background-color: $p-color_white;
+    border: 1px solid $p-color_grey_600;
+    color: $p-color_grey_600;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $p-color_grey_100;
+      }
+    }
+
+    @media (hover: none) {
+      -webkit-tap-highlight-color: transparent;
+
+      &:active {
+        background-color: $p-color_grey_100;
+      }
+    }
+  }
+
+  &[data-modifierColor='success'] {
+    background-color: $s-color_status_success;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $p-color_green_900;
+      }
+    }
+
+    @media (hover: none) {
+      -webkit-tap-highlight-color: transparent;
+
+      &:active {
+        background-color: $p-color_green_900;
+      }
+    }
+  }
+
+  &[data-modifierColor='alert'] {
+    background-color: $s-color_status_alert;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $p-color_red_1100;
+      }
+    }
+
+    @media (hover: none) {
+      -webkit-tap-highlight-color: transparent;
+
+      &:active {
+        background-color: $p-color_red_1100;
+      }
+    }
+  }
+
+  &[data-modifierSize='small'] {
+    min-width: auto;
+    padding: pxrem(3) pxrem(9);
+    @include text-style(button_s);
+
+    .icon {
+      @include font($font-size_xs);
+    }
+  }
+
+  &[data-modifierIcon='after'] {
+    position: relative;
+    padding-right: 1.2rem;
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    right: 0.4rem;
+    @include font($font-size_s);
+    transform: translateY(-50%);
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: pxrem(20);
+}

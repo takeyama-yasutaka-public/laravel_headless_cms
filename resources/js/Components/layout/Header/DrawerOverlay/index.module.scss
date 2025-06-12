@@ -1,0 +1,23 @@
+@use '@/styles/global' as *;
+
+.drawerOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $p-color_opacity_black_06;
+  z-index: $z-index_drawer-overlay;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $transition_middle, visibility $transition_middle;
+
+  &[data-modifier='active'] {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @include media(header-pc) {
+    display: none;
+  }
+}

@@ -1,0 +1,107 @@
+@use '@/styles/global' as *;
+
+.modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity $transition_middle,
+        visibility $transition_middle;
+    z-index: $z-index_modal;
+
+    &[data-modifier='active'] {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &::backdrop {
+        background: $p-color_opacity_black_06;
+    }
+
+    .box {
+        display: flex;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: min(pxrem(800), 80%);
+        max-height: 80%;
+        background-color: $p-color_white;
+        border-radius: 4px;
+        box-shadow: $elevation_style1;
+        transform: translateY(-50%) translateX(-50%);
+    }
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: pxrem(20);
+        gap: pxrem(20);
+        overflow-y: auto;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: pxrem(20);
+        }
+    }
+
+    .close {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: pxrem(-10);
+        right: pxrem(-10);
+        width: pxrem(30);
+        height: pxrem(30);
+        background-color: $p-color_grey_900;
+        border-radius: 100px;
+        transition: $transition_high;
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: $p-color_grey_300;
+            }
+        }
+
+        @media (hover: none) {
+            -webkit-tap-highlight-color: transparent;
+
+            &:active {
+                background-color: $p-color_grey_300;
+            }
+        }
+    }
+
+    .icon {
+        color: $p-color_white;
+        @include font(16px);
+    }
+}
+
+.modalHeader {
+    display: flex;
+    flex-direction: column;
+    gap: pxrem(10);
+}
+
+.modalBody {
+    display: flex;
+    flex-direction: column;
+    gap: pxrem(10);
+}
+
+.modalFooter {
+    display: flex;
+    justify-content: center;
+}

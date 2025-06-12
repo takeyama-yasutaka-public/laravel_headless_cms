@@ -1,0 +1,46 @@
+@use '@/styles/global' as *;
+
+.header {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height_pc;
+  z-index: $z-index_header;
+  background-color: $p-color_opacity_white_095;
+  box-shadow: $elevation_style1;
+
+  @include media(header-sp) {
+    height: $header-height_sp;
+  }
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: $content_width;
+    padding: 0 pxrem(10);
+  }
+
+  .navPc {
+    height: 100%;
+
+    @include media(header-sp) {
+      display: none;
+    }
+  }
+
+  .navSP {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include media(header-pc) {
+      display: none;
+    }
+  }
+}

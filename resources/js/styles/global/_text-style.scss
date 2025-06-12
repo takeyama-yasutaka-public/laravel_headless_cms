@@ -1,0 +1,111 @@
+@use 'variables' as *;
+
+/*********************************
+    テキストスタイル
+*********************************/
+
+@mixin text-style($modifer: 'body_m') {
+  @if $modifer == 'heading_first_pc' {
+    font-family: $font-family_primary;
+    font-size: $font-size_xxxxxl;
+    line-height: $line-height_s;
+    letter-spacing: $letter-spacing_m;
+    font-weight: $font-weight_m;
+  } @else if $modifer == 'heading_first_sp' {
+    font-family: $font-family_primary;
+    font-size: $font-size_xxxxl;
+    line-height: $line-height_s;
+    letter-spacing: $letter-spacing_m;
+    font-weight: $font-weight_m;
+  } @else if $modifer == 'heading_second_pc' {
+    font-family: $font-family_primary;
+    font-size: $font-size_xxxxl;
+    line-height: $line-height_s;
+    letter-spacing: $letter-spacing_m;
+    font-weight: $font-weight_m;
+  } @else if $modifer == 'heading_second_sp' {
+    font-family: $font-family_primary;
+    font-size: $font-size_xxxl;
+    line-height: $line-height_s;
+    letter-spacing: $letter-spacing_m;
+    font-weight: $font-weight_m;
+  } @else if $modifer == 'heading_third_pc' {
+    font-family: $font-family_primary;
+    font-size: $font-size_xxxl;
+    line-height: $line-height_s;
+    letter-spacing: $letter-spacing_m;
+    font-weight: $font-weight_m;
+  } @else if $modifer == 'heading_third_sp' {
+    font-family: $font-family_primary;
+    font-size: $font-size_xxl;
+    line-height: $line-height_s;
+    letter-spacing: $letter-spacing_m;
+    font-weight: $font-weight_m;
+  } @else if $modifer == 'heading_fourth_pc' {
+    font-family: $font-family_primary;
+    font-size: $font-size_xxl;
+    line-height: $line-height_s;
+    letter-spacing: $letter-spacing_m;
+    font-weight: $font-weight_b;
+  } @else if $modifer == 'heading_fourth_sp' {
+    font-family: $font-family_primary;
+    font-size: $font-size_xl;
+    line-height: $line-height_s;
+    letter-spacing: $letter-spacing_m;
+    font-weight: $font-weight_b;
+  } @else if $modifer == 'heading_fifth_pc' {
+    font-family: $font-family_primary;
+    font-size: $font-size_xl;
+    line-height: $line-height_s;
+    letter-spacing: $letter-spacing_m;
+    font-weight: $font-weight_m;
+  } @else if $modifer == 'heading_fifth_sp' {
+    font-family: $font-family_primary;
+    font-size: $font-size_m;
+    line-height: $line-height_s;
+    letter-spacing: $letter-spacing_m;
+    font-weight: $font-weight_m;
+  } @else if $modifer == 'body_xl' {
+    font-family: $font-family_primary;
+    font-size: $font-size_xl;
+    line-height: $line-height_m;
+    letter-spacing: $letter-spacing_m;
+    font-weight: $font-weight_r;
+  } @else if $modifer == 'body_l' {
+    font-family: $font-family_primary;
+    font-size: $font-size_l;
+    line-height: $line-height_m;
+    letter-spacing: $letter-spacing_m;
+    font-weight: $font-weight_r;
+  } @else if $modifer == 'body_m' {
+    font-family: $font-family_primary;
+    font-size: $font-size_m;
+    line-height: $line-height_m;
+    letter-spacing: $letter-spacing_m;
+    font-weight: $font-weight_r;
+  } @else if $modifer == 'body_s' {
+    font-family: $font-family_primary;
+    font-size: $font-size_s;
+    line-height: $line-height_m;
+    letter-spacing: $letter-spacing_m;
+    font-weight: $font-weight_r;
+  } @else if $modifer == 'body_xs' {
+    font-family: $font-family_primary;
+    font-size: $font-size_xs;
+    line-height: $line-height_m;
+    letter-spacing: $letter-spacing_m;
+    font-weight: $font-weight_r;
+  } @else if $modifer == 'button_m' {
+    font-family: $font-family_primary;
+    font-size: $font-size_l;
+    line-height: $line-height_s;
+    letter-spacing: $letter-spacing_m;
+    font-weight: $font-weight_b;
+  } @else if $modifer == 'button_s' {
+    font-family: $font-family_primary;
+    font-size: $font-size_s;
+    line-height: $line-height_s;
+    letter-spacing: $letter-spacing_m;
+    font-weight: $font-weight_b;
+  }
+}

@@ -1,0 +1,39 @@
+@use '@/styles/global' as *;
+
+.imagePopover {
+    display: flex;
+    flex-direction: column;
+    padding: pxrem(10);
+    background-color: $p-color_white;
+    border: 1px solid $s-color_border_field;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.popoverInputWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: pxrem(5);
+    gap: pxrem(10);
+    color: $p-color_grey_600;
+    @include text-style(button_s);
+
+    input {
+        padding: pxrem(3);
+        border: 1px solid $s-color_border_field;
+        border-radius: 4px;
+        width: 4rem;
+    }
+}
+
+.popoverButtonWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: pxrem(10);
+
+    button {
+        color: $p-color_grey_600;
+        @include text-style(button_s);
+    }
+}

@@ -1,0 +1,18 @@
+@use '@/styles/global' as *;
+
+/*********************************
+    変数
+*********************************/
+
+/* px-to-vw,px-to-vh用ベース幅設定 */
+:root {
+  --base-width: 1440; // PC用のベース幅
+  --base-height: 900; // PC用のベース高さ
+}
+
+@include media(sp) {
+  :root {
+    --base-width: 414; // SP用のベース幅
+    --base-height: 896; // SP用のベース高さ
+  }
+}

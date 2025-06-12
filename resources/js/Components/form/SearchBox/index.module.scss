@@ -1,0 +1,39 @@
+@use '@/styles/global' as *;
+
+.searchBox {
+  display: flex;
+  justify-content: space-between;
+  padding: pxrem(5) pxrem(5) pxrem(5) pxrem(10);
+  background-color: $p-color_white;
+  border: 1px solid $s-color_border_field;
+  border-radius: 4px;
+
+  &:focus-within {
+    padding: pxrem(4) pxrem(4) pxrem(4) pxrem(9);
+    border: 2px solid $s-color_border_focused;
+    outline: none;
+  }
+
+  &[data-modifier='max520'] {
+    max-width: pxrem(520);
+  }
+
+  input {
+    flex: 1;
+    min-width: 0;
+
+    &::placeholder {
+      color: $s-color_text_place-holder;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    width: pxrem(26);
+    margin-left: pxrem(5);
+    text-align: center;
+  }
+}

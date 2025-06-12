@@ -1,0 +1,34 @@
+@use '@/styles/global' as *;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: pxrem(40);
+
+  @include media(sp) {
+    order: 1;
+  }
+}
+
+.contentBox {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: $s-color_background_primary;
+  border-radius: 4px;
+  box-shadow: $elevation_style1;
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: pxrem(1000);
+    padding: pxrem(40);
+    gap: pxrem(40);
+
+    @include media(sp) {
+      padding: pxrem(40) pxrem(20);
+    }
+  }
+}

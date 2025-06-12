@@ -1,0 +1,72 @@
+@use '@/styles/global' as *;
+
+.imageEdit {
+    display: flex;
+    flex-direction: column;
+    gap: pxrem(40);
+}
+
+.imageEditUpload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: pxrem(10);
+    width: 100%;
+}
+
+.imageEditUploadButtonWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.imageEditList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: pxrem(20) pxrem(10);
+}
+
+.imageEditListItem {
+    width: 100%;
+    max-width: pxrem(100);
+    display: flex;
+    flex-direction: column;
+    gap: pxrem(10);
+
+    img {
+        width: 100%;
+        @include image-aspect-ratio(ratio_16-9);
+    }
+}
+
+.imageEditListItemButtonWrapper {
+    display: flex;
+    justify-content: center;
+    gap: pxrem(5);
+
+    button {
+        display: inline-block;
+        width: fit-content;
+        min-width: auto;
+        padding: pxrem(6) pxrem(6);
+        border-radius: 4px;
+        color: $p-color_grey_600;
+        @include text-style(button_s);
+        text-decoration: none;
+        text-align: center;
+        transition: $transition_high;
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: $p-color_grey_100;
+            }
+        }
+
+        @media (hover: none) {
+            -webkit-tap-highlight-color: transparent;
+
+            &:active {
+                background-color: $p-color_grey_100;
+            }
+        }
+    }
+}

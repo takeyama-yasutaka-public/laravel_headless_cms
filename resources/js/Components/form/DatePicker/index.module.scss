@@ -1,0 +1,25 @@
+@use '@/styles/global' as *;
+
+.datePickerWrapper {
+    width: 100%;
+    max-width: pxrem(200);
+    z-index: 500;
+}
+
+.datePicker {
+    width: 100%;
+    padding: pxrem(5) pxrem(10);
+    background-color: $p-color_white;
+    border: 1px solid $s-color_border_field;
+    border-radius: 4px;
+
+    &::placeholder {
+        color: $s-color_text_place-holder;
+    }
+
+    &:focus {
+        padding: pxrem(4) pxrem(9);
+        border: 2px solid $s-color_border_focused;
+        outline: none;
+    }
+}

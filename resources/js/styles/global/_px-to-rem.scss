@@ -1,0 +1,9 @@
+/*********************************
+    rem単位をpx感覚で使う
+*********************************/
+
+$baseFontSize: 16;
+
+@function pxrem($pixels) {
+  @return $pixels / $baseFontSize * 1rem;
+}

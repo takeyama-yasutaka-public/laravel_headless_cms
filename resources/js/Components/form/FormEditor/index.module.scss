@@ -1,0 +1,243 @@
+@use '@/styles/global' as *;
+
+$solid-circle-icon: 'data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C!--!Font%20Awesome%20Free%206.6.0%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%2Ffree%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22%231a1a1a%22%20d%3D%22M256%20512A256%20256%200%201%200%20256%200a256%20256%200%201%200%200%20512z%22%2F%3E%3C%2Fsvg%3E';
+$regular-circl-icon: 'data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C!--!Font%20Awesome%20Free%206.6.0%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%2Ffree%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22%231a1a1a%22%20d%3D%22M464%20256A208%20208%200%201%200%2048%20256a208%20208%200%201%200%20416%200zM0%20256a256%20256%200%201%201%20512%200A256%20256%200%201%201%200%20256z%22%2F%3E%3C%2Fsvg%3E';
+
+.editor {
+    display: flex;
+    flex-direction: column;
+    gap: pxrem(5);
+}
+
+.editorUi {
+    position: sticky;
+    top: $header-height_pc;
+    background-color: $p-color_opacity_white_095;
+    margin-left: pxrem(2);
+    margin-right: pxrem(2);
+    z-index: 100;
+
+    @include media(header-sp) {
+        top: $header-height_sp;
+    }
+
+    button {
+        display: inline-block;
+        width: fit-content;
+        min-width: auto;
+        padding: pxrem(6) pxrem(6);
+        border-radius: 4px;
+        color: $p-color_grey_600;
+        @include text-style(button_s);
+        text-decoration: none;
+        text-align: center;
+        transition: $transition_high;
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: $p-color_grey_100;
+            }
+        }
+
+        @media (hover: none) {
+            -webkit-tap-highlight-color: transparent;
+
+            &:active {
+                background-color: $p-color_grey_100;
+            }
+        }
+    }
+}
+
+.editorContent {
+    width: 100%;
+    padding: pxrem(5) pxrem(10);
+    background-color: $p-color_white;
+    border: 1px solid $s-color_border_field;
+    border-radius: 4px;
+    resize: vertical;
+
+    &::placeholder {
+        color: $s-color_text_place-holder;
+    }
+
+    &:focus {
+        padding: pxrem(4) pxrem(9);
+        border: 2px solid $s-color_border_focused;
+        outline: none;
+    }
+}
+
+.editorContent > div {
+    min-height: pxrem(200);
+    display: flex;
+    flex-direction: column;
+    gap: pxrem(20);
+
+    &:focus {
+        outline: none;
+    }
+
+    h2 {
+        width: fit-content;
+        color: $s-color_text_body;
+        @include text-style(heading_second_pc);
+
+        &::after {
+            content: '';
+            display: block;
+            height: pxrem(2);
+            margin-top: pxrem(5);
+            background-color: $p-color_grey_900;
+            border-radius: 100px;
+        }
+
+        @include media(sp) {
+            @include text-style(heading_second_sp);
+        }
+    }
+
+    h3 {
+        position: relative;
+        color: $s-color_text_body;
+        @include text-style(heading_third_pc);
+        padding-left: pxrem(14);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0.375rem;
+            left: 0;
+            width: pxrem(4);
+            height: $font-size_xxxl;
+            background-color: $p-color_grey_900;
+            border-radius: 100px;
+        }
+
+        @include media(sp) {
+            @include text-style(heading_third_sp);
+
+            &::before {
+                height: $font-size_xxl;
+            }
+        }
+    }
+
+    hr {
+        width: 100%;
+        border-color: $s-color_border_divider;
+    }
+
+    blockquote {
+        @include font($font-size_xs);
+    }
+
+    code[class^='language-'],
+    pre code[class^='language-'] {
+        background: $p-color_grey_900;
+        color: $p-color_grey_100;
+        display: block;
+        padding: pxrem(5) pxrem(10);
+        border-radius: 4px;
+        white-space: pre;
+        overflow-x: auto;
+        font-family: 'Fira Code', Consolas, Monaco, monospace;
+        @include font($font-size_s);
+        line-height: $line-height_s;
+    }
+
+    .hljs-keyword,
+    .hljs-string,
+    .hljs-title,
+    .hljs-built_in,
+    .hljs-literal,
+    .hljs-comment,
+    .hljs-number {
+        font-weight: normal;
+    }
+
+    table {
+        tr {
+            &:first-child > * {
+                border-top: 1px solid $s-color_border_field;
+            }
+        }
+
+        th {
+            padding: pxrem(5) pxrem(10);
+            border: none;
+            border-right: 1px solid $s-color_border_field;
+            border-bottom: 1px solid $s-color_border_field;
+            background-color: $p-color_grey_50;
+            vertical-align: middle;
+
+            &:first-child {
+                border-left: 1px solid $s-color_border_field;
+            }
+        }
+
+        td {
+            padding: pxrem(5) pxrem(10);
+            border: none;
+            border-right: 1px solid $s-color_border_field;
+            border-bottom: 1px solid $s-color_border_field;
+            vertical-align: middle;
+
+            &:first-child {
+                border-left: 1px solid $s-color_border_field;
+            }
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: pxrem(10);
+
+        > li {
+            position: relative;
+            padding-left: 0.8em;
+            line-height: $line-height_s;
+
+            &::before {
+                content: url($solid-circle-icon);
+                position: absolute;
+                top: -0.2em;
+                left: 0;
+                width: pxrem(8.6);
+            }
+        }
+    }
+
+    ol {
+        counter-reset: order-list;
+        display: flex;
+        flex-direction: column;
+        gap: pxrem(10);
+
+        > li {
+            position: relative;
+            padding-left: 1.3em;
+            line-height: $line-height_s;
+
+            &::before {
+                counter-increment: order-list;
+                content: counter(order-list);
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: 0;
+                left: 0;
+                width: 1.6em;
+                height: 1.6em;
+                padding-left: 0.1em;
+                background-color: $p-color_grey_600;
+                border-radius: 100px;
+                color: $s-color_text_on-fill;
+                @include font($font-size_xxs);
+                line-height: $line-height_s;
+            }
+        }
+    }
+}

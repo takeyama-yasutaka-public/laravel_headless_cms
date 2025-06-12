@@ -1,0 +1,39 @@
+@use '@/styles/global' as *;
+
+.form_unit {
+    display: flex;
+    flex-direction: column;
+    gap: pxrem(10);
+
+    &[data-modifier='radio'] {
+        gap: pxrem(20);
+    }
+}
+
+.form_unit_header {
+    display: flex;
+    align-items: center;
+    gap: pxrem(10);
+
+    .heading {
+        line-height: $line-height_s;
+    }
+
+    .required {
+        color: $s-color_status_alert;
+        @include font($font-size_xs);
+    }
+}
+
+.form_unit_body {
+    display: flex;
+    flex-direction: column;
+    gap: pxrem(10);
+}
+
+.form_unit_error {
+    gap: pxrem(10);
+    color: $s-color_status_alert;
+    @include font($font-size_s);
+    line-height: $line-height_s;
+}

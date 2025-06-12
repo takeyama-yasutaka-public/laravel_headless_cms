@@ -1,0 +1,57 @@
+@use '@/styles/global' as *;
+
+.formRadioGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: pxrem(20);
+}
+
+.formRadio {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    cursor: pointer;
+
+    .input {
+        width: 0;
+        height: 0;
+        border: none;
+        box-shadow: none;
+
+        &:focus + .icon {
+            outline: 2px solid $s-color_border_focused;
+        }
+
+        &:checked + .icon {
+            border-color: $p-color_blue_900;
+
+            &::before {
+                display: block;
+            }
+        }
+    }
+
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: pxrem(20);
+        height: pxrem(20);
+        margin-right: pxrem(10);
+        border: 2px solid $p-color_grey_900;
+        border-radius: 100px;
+
+        &::before {
+            display: none;
+            content: '';
+            width: pxrem(8);
+            height: pxrem(8);
+            background-color: $p-color_blue_900;
+            border-radius: 100px;
+        }
+    }
+
+    .text {
+        line-height: $line-height_s;
+    }
+}

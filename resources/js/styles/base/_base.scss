@@ -1,0 +1,48 @@
+@use '@/styles/global' as *;
+
+/*********************************
+    基本設定
+*********************************/
+
+/* html */
+html {
+  height: 100%;
+  font-size: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: $s-color_text_body;
+  @include text-style(body_m);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: $s-color_link_normal;
+  text-decoration: underline;
+  transition: $transition_high;
+
+  &:where(:visited) {
+    color: $s-color_link_visited;
+  }
+
+  @media (hover: hover) {
+    &:where(:hover) {
+      color: $s-color_link_hover;
+    }
+  }
+
+  @media (hover: none) {
+    -webkit-tap-highlight-color: transparent;
+
+    &:where(:active) {
+      color: $s-color_link_hover;
+    }
+  }
+}

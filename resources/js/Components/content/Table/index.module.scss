@@ -1,0 +1,107 @@
+@use '@/styles/global' as *;
+
+.table {
+    &[data-modifierDimension='horizontal'] {
+        th {
+            width: pxrem(180);
+
+            @include media(sp) {
+                width: auto;
+            }
+        }
+    }
+
+    &[data-modifierDimension='vertical'] {
+        tbody {
+            tr {
+                &:first-child > * {
+                    border-top: none;
+                }
+            }
+        }
+    }
+
+    &[data-modifierDimension='cross'] {
+        thead {
+            tr {
+                &:first-child > *:first-child {
+                    background-color: $p-color_white;
+                    border-top: none;
+                    border-left: none;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                &:first-child > * {
+                    border-top: none;
+                }
+            }
+        }
+    }
+
+    &[data-modifierScroll='spScroll'] {
+        overflow-x: auto;
+
+        .inner {
+            @include media(sp) {
+                min-width: pxrem(900);
+            }
+        }
+
+        th,
+        td {
+            white-space: nowrap;
+        }
+
+        &:not([data-modifierDimension='vertical']) {
+            th {
+                &:first-child {
+                    position: sticky;
+                    left: 0;
+                    width: pxrem(180);
+                }
+            }
+        }
+    }
+
+    .inner {
+        width: 100%;
+        background-color: $p-color_white;
+        border-spacing: 0;
+        border-collapse: separate;
+    }
+
+    tr {
+        &:first-child > * {
+            border-top: 1px solid $s-color_border_field;
+        }
+    }
+
+    th {
+        padding: pxrem(5) pxrem(10);
+        border: none;
+        border-right: 1px solid $s-color_border_field;
+        border-bottom: 1px solid $s-color_border_field;
+        background-color: $p-color_grey_50;
+        vertical-align: middle;
+
+        &:first-child {
+            border-left: 1px solid $s-color_border_field;
+        }
+    }
+
+    td {
+        padding: pxrem(5) pxrem(10);
+        border: none;
+        border-right: 1px solid $s-color_border_field;
+        border-bottom: 1px solid $s-color_border_field;
+        vertical-align: middle;
+        overflow-wrap: anywhere;
+
+        &:first-child {
+            border-left: 1px solid $s-color_border_field;
+        }
+    }
+}

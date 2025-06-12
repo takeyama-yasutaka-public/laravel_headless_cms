@@ -1,0 +1,268 @@
+/*********************************
+    変数
+*********************************/
+
+/* primitive-color_digital-agency */
+$p-color_white: #ffffff;
+$p-color_black: #000000;
+$p-color_grey_50: #f2f2f2;
+$p-color_grey_100: #e6e6e6;
+$p-color_grey_200: #cccccc;
+$p-color_grey_300: #b3b3b3;
+$p-color_grey_400: #999999;
+$p-color_grey_417: #959595;
+$p-color_grey_500: #7f7f7f;
+$p-color_grey_536: #767676;
+$p-color_grey_600: #666666;
+$p-color_grey_700: #4d4d4d;
+$p-color_grey_800: #333333;
+$p-color_grey_900: #1a1a1a;
+$p-color_blue_50: #e8f1fe;
+$p-color_blue_100: #d9e6ff;
+$p-color_blue_200: #c5d7fb;
+$p-color_blue_300: #9db7f9;
+$p-color_blue_400: #7096f8;
+$p-color_blue_500: #4979f5;
+$p-color_blue_600: #3460fb;
+$p-color_blue_700: #264af4;
+$p-color_blue_800: #0031d8;
+$p-color_blue_900: #0017c1;
+$p-color_blue_1000: #00118f;
+$p-color_blue_1100: #000071;
+$p-color_blue_1200: #000060;
+$p-color_light-blue_50: #f0f9ff;
+$p-color_light-blue_100: #dcf0ff;
+$p-color_light-blue_200: #c0e4ff;
+$p-color_light-blue_300: #97d3ff;
+$p-color_light-blue_400: #57b8ff;
+$p-color_light-blue_500: #39abff;
+$p-color_light-blue_600: #008bf2;
+$p-color_light-blue_700: #0877d7;
+$p-color_light-blue_800: #0066be;
+$p-color_light-blue_900: #0055ad;
+$p-color_light-blue_1000: #00428c;
+$p-color_light-blue_1100: #00316a;
+$p-color_light-blue_1200: #00234b;
+$p-color_cyan_50: #e9f7f9;
+$p-color_cyan_100: #c8f8ff;
+$p-color_cyan_200: #99f2ff;
+$p-color_cyan_300: #79e2f2;
+$p-color_cyan_400: #2bc8e4;
+$p-color_cyan_500: #01b7d6;
+$p-color_cyan_600: #00a3bf;
+$p-color_cyan_700: #008da6;
+$p-color_cyan_800: #008299;
+$p-color_cyan_900: #006f83;
+$p-color_cyan_1000: #006173;
+$p-color_cyan_1100: #004c59;
+$p-color_cyan_1200: #003741;
+$p-color_green_50: #e6f5ec;
+$p-color_green_100: #c2e5d1;
+$p-color_green_200: #9bd4b5;
+$p-color_green_300: #71c598;
+$p-color_green_400: #51b883;
+$p-color_green_500: #2cac6e;
+$p-color_green_600: #259d63;
+$p-color_green_700: #1d8b56;
+$p-color_green_800: #197a4b;
+$p-color_green_900: #115a36;
+$p-color_green_1000: #0c472a;
+$p-color_green_1100: #08351f;
+$p-color_green_1200: #032213;
+$p-color_lime_50: #ebfad9;
+$p-color_lime_100: #d0f5a2;
+$p-color_lime_200: #c0f354;
+$p-color_lime_300: #ade830;
+$p-color_lime_400: #9ddd15;
+$p-color_lime_500: #8cc80c;
+$p-color_lime_600: #7eb40d;
+$p-color_lime_700: #6fa104;
+$p-color_lime_800: #618e00;
+$p-color_lime_900: #507500;
+$p-color_lime_1000: #3e5a00;
+$p-color_lime_1100: #2c4100;
+$p-color_lime_1200: #1e2d00;
+$p-color_yellow_50: #fbf5e0;
+$p-color_yellow_100: #fff0b3;
+$p-color_yellow_200: #ffe380;
+$p-color_yellow_300: #ffd43d;
+$p-color_yellow_400: #ffc700;
+$p-color_yellow_500: #ebb700;
+$p-color_yellow_600: #d2a400;
+$p-color_yellow_700: #b78f00;
+$p-color_yellow_800: #a58000;
+$p-color_yellow_900: #927200;
+$p-color_yellow_1000: #806300;
+$p-color_yellow_1100: #6e5600;
+$p-color_yellow_1200: #604b00;
+$p-color_orange_50: #ffeee2;
+$p-color_orange_100: #ffdfca;
+$p-color_orange_200: #ffc199;
+$p-color_orange_300: #ffa66d;
+$p-color_orange_400: #ff8d44;
+$p-color_orange_500: #ff7628;
+$p-color_orange_600: #fb5b01;
+$p-color_orange_700: #e25100;
+$p-color_orange_800: #c74700;
+$p-color_orange_900: #ac3e00;
+$p-color_orange_1000: #8b3200;
+$p-color_orange_1100: #6d2700;
+$p-color_orange_1200: #541e00;
+$p-color_red_50: #fdeeee;
+$p-color_red_100: #ffdada;
+$p-color_red_200: #ffbbbb;
+$p-color_red_300: #ff9696;
+$p-color_red_400: #ff7171;
+$p-color_red_500: #ff5454;
+$p-color_red_600: #fe3939;
+$p-color_red_700: #fa0000;
+$p-color_red_800: #ec0000;
+$p-color_red_900: #ce0000;
+$p-color_red_1000: #a90000;
+$p-color_red_1100: #850000;
+$p-color_red_1200: #620000;
+$p-color_magenta_50: #f3e5f4;
+$p-color_magenta_100: #ffd0ff;
+$p-color_magenta_200: #ffaeff;
+$p-color_magenta_300: #ff8eff;
+$p-color_magenta_400: #f661f6;
+$p-color_magenta_500: #f137f1;
+$p-color_magenta_600: #db00db;
+$p-color_magenta_700: #c000c0;
+$p-color_magenta_800: #aa00aa;
+$p-color_magenta_900: #8b008b;
+$p-color_magenta_1000: #6c006c;
+$p-color_magenta_1100: #500050;
+$p-color_magenta_1200: #3b003b;
+$p-color_purple_50: #f1eafa;
+$p-color_purple_100: #ecddff;
+$p-color_purple_200: #ddc2ff;
+$p-color_purple_300: #cda6ff;
+$p-color_purple_400: #bb87ff;
+$p-color_purple_500: #a565f8;
+$p-color_purple_600: #8843e1;
+$p-color_purple_700: #6f23d0;
+$p-color_purple_800: #5c10be;
+$p-color_purple_900: #5109ad;
+$p-color_purple_1000: #41048e;
+$p-color_purple_1100: #30016c;
+$p-color_purple_1200: #21004b;
+
+/* primitive-color_project */
+$p-color_opacity_white_095: #fffffff2;
+$p-color_opacity_black_005: #0000000d;
+$p-color_opacity_black_06: #00000099;
+$p-color_opacity_grey_900_06: #1a1a1a99;
+$p-color_brand-main_primary: #47e5ff;
+$p-color_brand-main_secondary: #cdf8ff;
+$p-color_brand-main_tertiary: #45a7b7;
+$p-color_brand-sub_primary: #ff5ba0;
+$p-color_brand-sub_secondary: #ffd9e9;
+$p-color_brand-sub_tertiary: #d00c5f;
+
+/* semantic-color */
+$s-color_text_body: $p-color_grey_900;
+$s-color_text_description: $p-color_grey_700;
+$s-color_text_place-holder: $p-color_grey_600;
+$s-color_text_on-fill: $p-color_white;
+$s-color_text_disabled: $p-color_grey_500;
+$s-color_link_normal: $p-color_blue_900;
+$s-color_link_hover: $p-color_blue_1000;
+$s-color_link_active: $p-color_blue_1000;
+$s-color_link_visited: $p-color_magenta_1000;
+$s-color_menu-link_normal: $p-color_grey_900;
+$s-color_menu-link_hover: $p-color_opacity_grey_900_06;
+$s-color_background_primary: $p-color_white;
+$s-color_background_secondary: $p-color_grey_100;
+$s-color_background_tertiary: $p-color_grey_50;
+$s-color_border_field: $p-color_grey_600;
+$s-color_border_focused: $p-color_light-blue_700;
+$s-color_border_disabled: $p-color_grey_300;
+$s-color_border_divider: $p-color_grey_300;
+$s-color_button_normal: $p-color_grey_600;
+$s-color_button_hover: $p-color_grey_800;
+$s-color_button_disabled: $p-color_grey_300;
+$s-color_status_success: $p-color_green_600;
+$s-color_status_alert: $p-color_red_800;
+$s-color_status_warning: $p-color_yellow_700;
+
+/* font-family */
+$font-family_primary:
+    'Noto Sans JP', 'YuGothic', 'Yu Gothic', 'Hiragino Kaku Gothic ProN',
+    'ヒラギノ角ゴ ProN W3', sans-serif;
+
+/* font-size */
+$font-size_xxxxxl: 2.25rem; //36px
+$font-size_xxxxl: 2rem; //32px
+$font-size_xxxl: 1.75rem; //28px
+$font-size_xxl: 1.5rem; //24px
+$font-size_xl: 1.25rem; //20px
+$font-size_l: 1.125rem; //18px
+$font-size_m: 1rem; //16px
+$font-size_s: 0.875rem; //14px
+$font-size_xs: 0.75rem; //12px
+$font-size_xxs: 0.625rem; //10px
+
+/* line-height */
+$line-height_m: 1.8;
+$line-height_s: 1.4;
+$line-height_same: 1;
+
+/* letter-spacing */
+$letter-spacing_m: 0.04em;
+$letter-spacing_s: 0.02em;
+
+/* font-weight */
+$font-weight_r: normal;
+$font-weight_m: 500;
+$font-weight_b: bold;
+
+/* content-width */
+$content-width: 1200px;
+
+/* sidebar-width */
+$sidebar-width_2column: 200px;
+$sidebar-width_3column-left: 180px;
+$sidebar-width_3column-right: 160px;
+
+/* header-height */
+$header-height_pc: 4rem;
+$header-height_sp: 3rem;
+
+/* z-index */
+$z-index_pagetop: 10;
+$z-index_drawer-overlay: 20;
+$z-index_header: 30;
+$z-index_modal: 40;
+$z-index_loading: 50;
+
+/* elevation */
+$elevation_style1:
+    0px 2px 8px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 5px 0px rgba(0, 0, 0, 0.3);
+$elevation_style2:
+    0px 2px 12px 2px rgba(0, 0, 0, 0.1),
+    0px 1px 6px 0px rgba(0, 0, 0, 0.3);
+$elevation_style3:
+    0px 4px 16px 3px rgba(0, 0, 0, 0.1),
+    0px 1px 6px 0px rgba(0, 0, 0, 0.3);
+$elevation_style4:
+    0px 6px 20px 4px rgba(0, 0, 0, 0.1),
+    0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+$elevation_style5:
+    0px 8px 24px 5px rgba(0, 0, 0, 0.1),
+    0px 2px 10px 0px rgba(0, 0, 0, 0.3);
+$elevation_style6:
+    0px 10px 30px 6px rgba(0, 0, 0, 0.1),
+    0px 3px 12px 0px rgba(0, 0, 0, 0.3);
+$elevation_style7:
+    0px 12px 36px 7px rgba(0, 0, 0, 0.1),
+    0px 3px 14px 0px rgba(0, 0, 0, 0.3);
+$elevation_style8:
+    0px 14px 40px 7px rgba(0, 0, 0, 0.1),
+    0px 3px 16px 0px rgba(0, 0, 0, 0.3);
+
+/* transition */
+$transition_high: 0.1s;
+$transition_middle: 0.3s;
+$transition_low: 0.5s;

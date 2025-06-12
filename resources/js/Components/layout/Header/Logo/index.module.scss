@@ -1,0 +1,29 @@
+@use '@/styles/global' as *;
+
+.logo {
+  line-height: $line-height_same;
+  transition: $transition_high;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  @media (hover: none) {
+    -webkit-tap-highlight-color: transparent;
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  img {
+    height: pxrem(24);
+    width: auto;
+
+    @include media(header-sp) {
+      height: pxrem(20);
+    }
+  }
+}

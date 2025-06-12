@@ -1,0 +1,27 @@
+@use '@/styles/global' as *;
+
+.formText {
+  width: 100%;
+  padding: pxrem(5) pxrem(10);
+  background-color: $p-color_white;
+  border: 1px solid $s-color_border_field;
+  border-radius: 4px;
+
+  &::placeholder {
+    color: $s-color_text_place-holder;
+  }
+
+  &:focus {
+    padding: pxrem(4) pxrem(9);
+    border: 2px solid $s-color_border_focused;
+    outline: none;
+  }
+
+  &[data-modifier='name'] {
+    max-width: pxrem(200);
+  }
+
+  &[data-modifier='mail'] {
+    max-width: pxrem(400);
+  }
+}

@@ -1,0 +1,32 @@
+@use '@/styles/global' as *;
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: $s-color_background_primary;
+
+  &[data-modifier='breadcrumb'] {
+    .inner {
+      padding: pxrem(20) pxrem(20) 0 pxrem(20);
+    }
+  }
+
+  &[data-modifier='ctaArea'] {
+    .inner {
+      padding: 0 pxrem(20) pxrem(40) pxrem(20);
+    }
+  }
+
+  .inner {
+    display: flex;
+    width: 100%;
+    max-width: $content_width;
+    padding: pxrem(20) pxrem(20) pxrem(40) pxrem(20);
+    gap: pxrem(40);
+
+    @include media(sp) {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@use '@/styles/global' as *;
+
+.pager {
+  width: fit-content;
+
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: pxrem(2);
+  }
+}
+
+.pagerItem {
+  &:first-child {
+    > * {
+      border-radius: 4px 0 0 4px;
+    }
+  }
+
+  &:last-child {
+    > * {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  a,
+  button,
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: pxrem(30);
+    height: pxrem(30);
+    background-color: $s-color_button_normal;
+    border: 1px solid transparent;
+    color: $s-color_text_on-fill;
+    line-height: $line-height_s;
+    text-decoration: none;
+    transition: $transition_high;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $s-color_button_hover;
+      }
+    }
+
+    @media (hover: none) {
+      -webkit-tap-highlight-color: transparent;
+
+      &:active {
+        background-color: $s-color_button_hover;
+      }
+    }
+
+    &[data-modifier='active'] {
+      background-color: $p-color_white;
+      border-color: $p-color_grey_600;
+      color: $p-color_grey_600;
+      pointer-events: none;
+    }
+
+    &[data-modifier='dots'] {
+      background-color: transparent;
+      color: $p-color_grey_600;
+      pointer-events: none;
+    }
+  }
+
+  .icon {
+    @include font($font-size_s);
+  }
+}
